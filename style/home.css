@@ -1,0 +1,121 @@
+nav ul {
+	list-style-type: none;
+	background: deepskyblue;
+	display: flex;
+	justify-content: space-around;
+	width: 100vw;
+	min-height: 10vh;
+	margin: 0;
+}
+
+nav ul li {
+	display: flex;
+	align-items: center;
+	color: white;
+	text-decoration: none;
+}
+
+nav li img {
+	width: 32px;
+	margin: 0 16px 0 0;
+}
+
+nav ul li a {
+	color: white;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+section {
+	min-height: 100vh;
+	background: dodgerblue;
+	margin: 16px 0;
+	padding: 16px 0 0;
+}
+
+section h3 {
+	color: white;
+	font-size: 2em;
+	padding: 16px;
+}
+
+footer {
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	min-height: 20vh;
+	background: deepskyblue;
+}
+
+footer img {
+	width: 64px;
+	margin: 0 16px 0 0;
+}
+
+#recents {
+	width: 100vw;
+	max-height: 80vh;
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+#recents img {
+	width: 64px;
+	padding: 16px;
+	margin: 16px;
+}
+
+#recents .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	align-content: center;
+	flex: 1;
+}
+
+#recents .recent-item {
+	flex: 1;
+	min-height: 60vh;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
+#recents .recent-item .item {
+	width: 50%;
+}
+
+#recents .select-right {
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+	left: 95%;
+}
+
+#about {
+}
+
+#events {
+}
+
+#contacts {
+}
+
+.clean-nav {
+	height: 100px;
+}
+
+.nav-top {
+	display: block;
+	position: fixed;
+	right: 24px;
+	bottom: 24px;
+	width: 62px;
+	background: white;
+	border-radius: 30px;
+	padding: 8px;
+}
+
+.nav-top-hidden {
+	display: none;
+}
