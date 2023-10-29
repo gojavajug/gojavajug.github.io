@@ -3,48 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <title>GOJAVA</title>
+
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/home.css">
 </head>
 <body>
-<strong>GO-JAVA</strong>
+<nav>
+    <ul>
+        <li><img src="./image/logo.png" alt="logo"><strong>GOJAVA</strong></li>
+        <li><a href="#about">Quem somos</a></li>
+        <li><a href="#events">Eventos</a></li>
+        <li><a href="#contacts">Contatos</a></li>
+    </ul>
+</nav>
 
-<section id="about">
-    <p>Comunidade de usuários JAVA de Goiás. Ajudamos a disseminar a linguagem de programação JAVA em Goiás e trazer
-        mais conhecimento para os profissionais
-        criarem e manterem softwares de qualidade com a linguagem mais utilizada no mundo de backend.
-    </p>
+<section id="recents">
+    <div class="container">
+        <img src="./image/icon-left.png" alt="select left">
+        <div class="recent-item">
+            <img class="item" src="./image/recent/logo.png" alt="Recentes-Item">
+        </div>
+        <img class="select-right" src="./image/icon-left.png" alt="select left">
+    </div>
 </section>
+<article>
+    <section id="about" class="section">
+        <h3>Quem Somos</h3>
+        <p>Comunidade de usuários JAVA de Goiás. Ajudamos a disseminar a linguagem de programação JAVA em Goiás e trazer
+            mais conhecimento para os profissionais
+            criarem e manterem softwares de qualidade com a linguagem mais utilizada no mundo de backend.
+        </p>
+    </section>
 
-<section id="events">
-    <h3>Eventos</h3>
-    <p>
-        Evento que a comunidade participou com representantes para disseminar informações e conhecimentos.
-    </p>
-    <h4>Campus Party - 2020</h4>
-    <p>Em breve...</p>
-    <h4>Campus Party - 2021</h4>
-    <p>Em breve...</p>
-    <h4>Campus Party - 2022</h4>
-    <p>Em breve...</p>
-    <h4>Campus Party - 2023</h4>
-    <p>Em breve...</p>
-    <h4>Join Community - 2023</h4>
-    <ol>
-        <li>
-            <p>Java Moderno: Rafael Souza</p>
-            <p>Em breve...</p>
-        </li>
-        <li>
-            <p>AWS CDK: Weder Sousa</p>
-            <p>Em breve...</p>
-        </li>
-        <li>
-            <p>Entregando consumidores kafka com qualidade: Alex Ferreira</p>
-            <p>
-                <a href="https://github.com/alexferreiradev/tecnologias_java/tree/join-23-demo3/Spring/sample-api">Projeto github</a>
-                <a>Slides em breve</a>
-            </p>
-        </li>
-    </ol>
-</section>
+    <section id="events" class="section">
+        <h3>Eventos</h3>
+        <p>
+            Evento que a comunidade participou com representantes para disseminar informações e conhecimentos.
+        </p>
+        <h4>Campus Party - 2020</h4>
+        <p>Em breve...</p>
+        <h4>Campus Party - 2021</h4>
+        <p>Em breve...</p>
+        <h4>Campus Party - 2022</h4>
+        <p>Em breve...</p>
+        <h4>Campus Party - 2023</h4>
+        <p>Em breve...</p>
+        <h4>Join Community - 2023</h4>
+        <ol>
+            <li>
+                <p>Java Moderno: Rafael Souza</p>
+                <p>Em breve...</p>
+            </li>
+            <li>
+                <p>AWS CDK: Weder Sousa</p>
+                <p>Em breve...</p>
+            </li>
+            <li>
+                <p>Entregando consumidores kafka com qualidade: Alex Ferreira</p>
+                <p>
+                    <a href="https://github.com/alexferreiradev/tecnologias_java/tree/join-23-demo3/Spring/sample-api">Projeto github</a>
+                    <a>Slides em breve</a>
+                </p>
+            </li>
+        </ol>
+    </section>
+    <section id="contacts" class="section">
+        <h3>Contatos</h3>
+        <p>Telegram: <a href="#">Link</a></p>
+    </section>
+</article>
+    <footer>
+        <div><img src="./image/logo.png" alt="logo"><strong>GOJAVA</strong></div>
+        <div>Menu</div>
+    </footer>
+    <div class="nav-top">
+        <a href="#"><img src="./image/icon-return-top.png" alt="Voltar acima"></a>
+    </div>
 </body>
+
+<script type="text/javascript">
+    const recents = ["alex-estacio.png", "rafael-join.png", "weder-cpgo.png", "alex-join.png","logo.png"];
+    const recentTimeChange = 3000; // milisseconds
+
+    function changeRecents(time) {
+        function createTimeout() {
+            const times = recents.map(function(recent, index) {
+                return setTimeout(function() {
+                    document.querySelector("#recents > div > div > img:nth-child(1)").setAttribute("src", "./image/recent/"+recent);
+                }, time * (index+1));
+            });
+
+            const recentSection = document.querySelector('#recents');
+            recentSection.onmouseleave = function(){
+                console.log("time", times)
+                times.forEach(function(t) {
+                    console.log("time", t)
+                    clearTimeout(t);
+                });
+            };
+        }
+
+        createTimeout();
+        const recentInterval = setInterval(function(){
+            createTimeout();
+        }, time * (recents.length));
+
+        return {recentInterval};
+    }
+
+    function controlTopButton() {
+        const topBt = document.querySelector('body > div');
+        const recentsSection = document.querySelector('#recents');
+        const articleSection = document.querySelector('article');
+		const footer = document.querySelector('body > footer');
+		articleSection.onmouseover = function(){
+            topBt.setAttribute("class", "nav-top")
+        };
+		recentsSection.onmouseover = function(){
+            topBt.setAttribute("class", "nav-top-hidden");
+        };
+		footer.onmouseover = function(){
+            topBt.setAttribute("class", "nav-top-hidden");
+        };
+        footer.onmouseleave = function(){
+            topBt.setAttribute("class", "nav-top")
+        };
+    }
+
+    const recentSection = document.querySelector('#recents');
+    recentSection.onmouseenter = function(){
+        const recent = changeRecents(recentTimeChange);
+
+        recentSection.onmouseleave = function(){
+            console.log("interval: ", recent.recentInterval)
+            clearInterval(recent.recentInterval);
+        };
+    };
+    controlTopButton();
+</script>
 </html>
