@@ -92,23 +92,12 @@
                     document.querySelector("#recents > div > div > img:nth-child(1)").setAttribute("src", "./image/recent/"+recent);
                 }, time * (index+1));
             });
-
-            const recentSection = document.querySelector('#recents');
-            recentSection.onmouseleave = function(){
-                console.log("time", times)
-                times.forEach(function(t) {
-                    console.log("time", t)
-                    clearTimeout(t);
-                });
-            };
         }
 
         createTimeout();
         const recentInterval = setInterval(function(){
             createTimeout();
         }, time * (recents.length));
-
-        return {recentInterval};
     }
 
     function controlTopButton() {
@@ -130,15 +119,7 @@
         };
     }
 
-    const recentSection = document.querySelector('#recents');
-    recentSection.onmouseenter = function(){
-        const recent = changeRecents(recentTimeChange);
-
-        recentSection.onmouseleave = function(){
-            console.log("interval: ", recent.recentInterval)
-            clearInterval(recent.recentInterval);
-        };
-    };
+    changeRecents(recentTimeChange);
     controlTopButton();
 </script>
 </html>
