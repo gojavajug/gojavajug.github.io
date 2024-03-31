@@ -39,17 +39,99 @@ section h3 {
 	padding: 16px;
 }
 
+section p {
+	font-size: 2em;
+	margin: 0 32px;
+}
+
+section h4, h5, h6 {
+	font-size: 2em;
+	padding: 32px;
+}
+
+#events div {
+	margin: 8px 32px;
+	font-size: 1em;
+	padding: 0;
+}
+
+#events div h4 {
+	font-size: 1.5em;
+	margin: 0 32px;
+	padding: 0;
+}
+
+#events div p,ul,ol {
+	margin: 0 48px;
+	font-size: 1em;
+}
+
+#events .icon {
+	height: 24px;
+	margin: 4px 8px;
+}
+#events li a {
+	display: flex;
+	align-content: center;
+
+	margin: 0 4px;
+}
+#events li .event-links {
+	display: flex;
+}
+#events a span {
+	font-size: 0.8em;
+}
+
+#contacts div {
+	display: flex;
+	min-height: 100%;
+	height: 100%;
+	flex-direction: column;
+	vertical-align: middle;
+	align-items: center;
+	justify-content: space-around;
+	flex-flow: column;
+	font-size: 2em;
+}
+#contacts img {
+	display: flex;
+	align-self: center;
+	height: 144px;
+}
+#contacts a {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	align-self: center;
+	color: white;
+	background: deepskyblue;
+	text-decoration: none;
+	border: 3px #fff solid;
+	margin: 32px 8px;
+	padding: 32px;
+}
+
 footer {
 	display: flex;
-	justify-content: space-between;
-	align-content: center;
+	justify-content: center;
+	align-items: center;
 	min-height: 20vh;
 	background: deepskyblue;
 }
 
+footer a {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-decoration: none;
+	color: white;
+}
+
 footer img {
-	width: 64px;
-	margin: 0 16px 0 0;
+	display: flex;
+	height: 91.438px;
+	margin: 32px;
 }
 
 #recents {
