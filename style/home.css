@@ -26,6 +26,20 @@ nav ul li a {
 	font-weight: bold;
 }
 
+nav #contacts-menu {
+	border: 2px white solid;
+	padding: 8px;
+	text-decoration: none;
+	border-radius: 8px;
+}
+nav #contacts-menu:hover {
+	border: 2px dodgerblue solid;
+	padding: 8px;
+	color: dodgerblue;
+	text-decoration: none;
+	border-radius: 8px;
+}
+
 section {
 	min-height: 100vh;
 	background: dodgerblue;
@@ -99,7 +113,7 @@ section h4, h5, h6 {
 	align-self: center;
 	height: 144px;
 }
-#contacts a {
+#contacts div a {
 	display: flex;
 	flex: 1;
 	flex-direction: column;
