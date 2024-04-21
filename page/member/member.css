@@ -14,6 +14,12 @@ nav ul li {
 	color: white;
 	text-decoration: none;
 }
+nav ul li a {
+	display: flex;
+	align-items: center;
+	color: white;
+	text-decoration: none;
+}
 
 nav li img {
 	width: 32px;
