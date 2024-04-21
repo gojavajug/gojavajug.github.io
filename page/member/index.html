@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GOJAVA-Membros</title>
+    <link rel="icon" href="../../image/logo.png" type="image/png">
+    <link rel="stylesheet" href="../../style/reset.css">
+    <link rel="stylesheet" href="./member.css">
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="../../index.html"><img src="../../image/logo.png" alt="logo"><strong>GOJAVA</strong></a></li>
+        <li><a href="../../index.html#about">Quem somos</a></li>
+        <li><a href="#">Membros</a></li>
+        <li><a href="../../index.html#events">Eventos</a></li>
+        <li><a href="../../index.html#contacts" id="contacts-menu">Faça parte !</a></li>
+    </ul>
+</nav>
+
+<article>
+    <section id="challenges" class="section">
+        <h3>Desafios profissionais</h3>
+        <p>Ajudamos você a ter maior sucesso nas entregas de softwares utilizando a linguagem Java. Descreva seu desafio abaixo com o maior detalhe possível e a comunidade irá te ajudar você e podemos compartilhar o aprendizado a todos no grupo do telegram.
+        </p>
+        <br>
+        <!--suppress HtmlDeprecatedAttribute -->
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc7VZBPJ-2PK40DMitAJxj2BVYESR2I2CLZRGYt-6TR5CK_Gg/viewform?embedded=true" width="100%" height="774" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </section>
+
+    <section id="news">
+        <h3>Novidades da comunidade</h3>
+        <p>Em breve iremos colocar aqui e no telegram as novidades da comunidade.
+        </p>
+    </section>
+
+    <section id="events" class="section">
+        <h3>Próximos Eventos</h3>
+        <p>
+            A comunidade irá participar de eventos para disseminar informações e conhecimentos. Gostaria de participar como palestrante, enviei uma mensagem no grupo do telegram que te ajudamos a participar também. Confira abaixo os próximos:
+        </p>
+        <div>
+            <ol>
+                <li>Flisol Anápolis: 27/04</li>
+                <li>Campus Party: 14/08 à 18/08</li>
+                <li>Join Community: Data a ser definida</li>
+            </ol>
+        </div>
+    </section>
+    <section id="articles" class="section">
+        <h3>Artigos úteis</h3>
+        <p>Você pode entrar em contato com a comunidade através do grupo no Telegram para ter seu artigo publicado aqui. Confira abaixo:</p>
+        <div>
+            <ol>
+                <li>EasyMock: <a href="https://dev.to/alexferreiradev/dont-discover-bugs-in-production-use-unit-tests-27b0">Link externo</a></li>
+                <li>Quarkus/TestContainers: <a href="https://dev.to/alexferreiradev/stop-suffering-with-tests-use-testcontainers-4m3k">Link externo</a></li>
+                <li>Spring/TestContainers: <a href="https://dev.to/alexferreiradev/high-system-quality-with-spring-integration-tests-3b53">Link externo</a></li>
+            </ol>
+        </div>
+    </section>
+    <section id="tools" class="section">
+        <h3>Ferramentas úteis</h3>
+        <p>Ferramentas úteis para desenvolvedores que podem te ajudar no dia a dia. Em breve...
+        </p>
+    </section>
+</article>
+
+<footer>
+    <a href="#"><img src="../../image/logo.png" alt="logo"><strong>Comunidade GOJAVA</strong></a>
+</footer>
+
+<div class="nav-top">
+    <a href="#"><img src="../../image/icon-return-top.png" alt="Voltar acima"></a>
+</div>
+</body>
+
+<script type="text/javascript">
+    const recents = ["alex-estacio.png", "rafael-join.png", "weder-cpgo.png", "alex-join.png","logo.png"];
+    const recentTimeChange = 1500; // milisseconds
+
+    function changeRecents(time) {
+        function createTimeout() {
+            const times = recents.map(function(recent, index) {
+                return setTimeout(function() {
+                    document.querySelector("#recents > div > div > img:nth-child(1)").setAttribute("src", "./image/recent/"+recent);
+                }, time * (index+1));
+            });
+        }
+
+        createTimeout();
+        const recentInterval = setInterval(function(){
+            createTimeout();
+        }, time * (recents.length));
+    }
+
+    function controlTopButton() {
+        const topBt = document.querySelector('body > div');
+        const recentsSection = document.querySelector('#recents');
+        const articleSection = document.querySelector('article');
+		const footer = document.querySelector('body > footer');
+		articleSection.onmouseover = function(){
+            topBt.setAttribute("class", "nav-top")
+        };
+		recentsSection.onmouseover = function(){
+            topBt.setAttribute("class", "nav-top-hidden");
+        };
+		footer.onmouseover = function(){
+            topBt.setAttribute("class", "nav-top-hidden");
+        };
+        footer.onmouseleave = function(){
+            topBt.setAttribute("class", "nav-top")
+        };
+    }
+
+    changeRecents(recentTimeChange);
+    controlTopButton();
+</script>
+</html>

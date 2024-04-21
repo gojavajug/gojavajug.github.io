@@ -1,0 +1,110 @@
+nav ul {
+	list-style-type: none;
+	background: deepskyblue;
+	display: flex;
+	justify-content: space-around;
+	width: 100vw;
+	min-height: 10vh;
+	margin: 0;
+}
+
+nav ul li {
+	display: flex;
+	align-items: center;
+	color: white;
+	text-decoration: none;
+}
+
+nav li img {
+	width: 32px;
+	margin: 0 16px 0 0;
+}
+
+nav ul li a {
+	color: white;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+nav #contacts-menu {
+	border: 2px white solid;
+	padding: 8px;
+	text-decoration: none;
+	border-radius: 8px;
+}
+nav #contacts-menu:hover {
+	border: 2px dodgerblue solid;
+	padding: 8px;
+	color: dodgerblue;
+	text-decoration: none;
+	border-radius: 8px;
+}
+
+section {
+	min-height: 100vh;
+	background: dodgerblue;
+	margin: 16px 0;
+	padding: 16px 0 0;
+}
+
+section h3 {
+	color: white;
+	font-size: 2em;
+	padding: 16px;
+}
+
+section p {
+	font-size: 2em;
+	margin: 0 32px;
+}
+
+section h4, h5, h6 {
+	font-size: 2em;
+	padding: 32px;
+}
+
+section li {
+	font-size: 2em;
+	margin: 0 32px;
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 20vh;
+	background: deepskyblue;
+}
+
+footer a {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-decoration: none;
+	color: white;
+}
+
+footer img {
+	display: flex;
+	height: 91.438px;
+	margin: 32px;
+}
+
+.clean-nav {
+	height: 100px;
+}
+
+.nav-top {
+	display: block;
+	position: fixed;
+	right: 24px;
+	bottom: 24px;
+	width: 62px;
+	background: white;
+	border-radius: 30px;
+	padding: 8px;
+}
+
+.nav-top-hidden {
+	display: none;
+}
