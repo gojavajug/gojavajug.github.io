@@ -74,6 +74,33 @@ section li {
 	margin: 0 32px;
 }
 
+section table {
+	width: 75%;
+	padding: 8px;
+	font-size: 1.2em;
+	border: 3px solid #00bfff;
+	border-spacing: 0;
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+
+section .table-li {
+	font-size: inherit;
+	margin: 0;
+}
+
+section table > tr {
+	border: none;
+}
+
+section table th {
+	border-bottom: 1px #00bfff solid;
+}
+
+table tr:nth-child(odd) td{
+	background-color: #00bfff;
+}
+
 footer {
 	display: flex;
 	justify-content: center;
