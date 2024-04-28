@@ -30,8 +30,11 @@
 
     <section id="news">
         <h3>Novidades da comunidade</h3>
-        <p>Em breve iremos colocar aqui e no telegram as novidades da comunidade.
+        <p>Iremos colocar aqui e no telegram as novidades da comunidade:
         </p>
+        <ul>
+            <li>Estamos preparando para ter evento presencial da JCP em Goiânia</li>
+        </ul>
     </section>
 
     <section id="events" class="section">
@@ -60,8 +63,70 @@
     </section>
     <section id="tools" class="section">
         <h3>Ferramentas úteis</h3>
-        <p>Ferramentas úteis para desenvolvedores que podem te ajudar no dia a dia. Em breve...
+        <p>Ferramentas úteis para desenvolvedores que podem te ajudar no dia a dia.
         </p>
+        <table style="margin-left: auto; margin-right: auto;">
+            <tbody>
+            <tr style="font-weight: bold;">
+            <th>Desafio</th>
+            <th>Ferramenta</th>
+            <th>Solu&ccedil;&atilde;o</th>
+            <th>Artigos</th>
+            <th>Limita&ccedil;&otilde;es</th>
+            </tr>
+            <tr>
+                <td>API Rest</td>
+                <td>Spring-boot</td>
+                <td>Proporciona criar serviços rest de forma produtiva. Disponibiliza um monte de auto configurações que facilita criar apis rest com todos requisitos paara ir para produção de forma profissional</td>
+                <td>Envie seu artigo ou indique um artigo para a comunidade</td>
+                <td>Não utiliza JVM nativa como outros frameworks web</td>
+            </tr>
+            <tr>
+                <td>API Rest</td>
+                <td>Quarkus</td>
+                <td>Proporciona criar serviços rest de forma produtiva. Disponibiliza um monte de bibliotecas secundárias (extensions) que facilita criar apis rest com todos requisitos paara ir para produção de forma profissional</td>
+                <td>Envie seu artigo ou indique um artigo para a comunidade</td>
+                <td>Utiliza compilação nativa o que pode gerar necessidade de mais memória RAM para gerar pacote executável, mas usa muito pouca memória para executar</td>
+            </tr>
+            <tr>
+                <td>Teste de componente</td>
+                <td>TestContainers</td>
+                <td>Provisiona containers docker de forma programatica</td>
+                <td>
+                    <ul>
+                        <li class="table-li">
+                            <a href="https://dev.to/alexferreiradev/high-system-quality-with-spring-integration-tests-3b53">Link externo para Spring</a>
+                        </li>
+                        <li class="table-li">
+                            <a href="https://dev.to/alexferreiradev/stop-suffering-with-tests-use-testcontainers-4m3k">Link externo para Quarkus</a>
+                        </li>
+                    </ul>
+                </td>
+                <td>Pode perder tempo de pipeline se mal utilizado</td>
+            </tr>
+            <tr>
+                <td>Logar requisições HTTP</td>
+                <td>Logbook</td>
+                <td>Proporciona logar de forma profissional requisições http em serviços rest Java.</td>
+                <td>Envie seu artigo ou indique um artigo para a comunidade</td>
+                <td>Envia uma limitação encontrada</td>
+            </tr>
+            <tr>
+                <td>Desenho c4model</td>
+                <td>Draw.io</td>
+                <td>Proporciona criar diagramas c4model de forma profissional atravez de configuração de uma biblioteca de diagrama da ferramenta.</td>
+                <td>Envie seu artigo ou indique um artigo para a comunidade</td>
+                <td>Não é possível fazer edições em tempo real em time</td>
+            </tr>
+            <tr>
+                <td>Mensageria</td>
+                <td>kafka</td>
+                <td>Proporciona criar tópicos e enviar mensagens de forma profissional. A forma de configurar depende do seu framework.</td>
+                <td>Envie seu artigo ou indique um artigo para a comunidade</td>
+                <td>Envia uma limitação encontrada</td>
+            </tr>
+            </tbody>
+        </table>
     </section>
 </article>
 
@@ -75,24 +140,6 @@
 </body>
 
 <script type="text/javascript">
-    const recents = ["alex-estacio.png", "rafael-join.png", "weder-cpgo.png", "alex-join.png","logo.png"];
-    const recentTimeChange = 1500; // milisseconds
-
-    function changeRecents(time) {
-        function createTimeout() {
-            const times = recents.map(function(recent, index) {
-                return setTimeout(function() {
-                    document.querySelector("#recents > div > div > img:nth-child(1)").setAttribute("src", "./image/recent/"+recent);
-                }, time * (index+1));
-            });
-        }
-
-        createTimeout();
-        const recentInterval = setInterval(function(){
-            createTimeout();
-        }, time * (recents.length));
-    }
-
     function controlTopButton() {
         const topBt = document.querySelector('body > div');
         const recentsSection = document.querySelector('#recents');
@@ -112,7 +159,6 @@
         };
     }
 
-    changeRecents(recentTimeChange);
     controlTopButton();
 </script>
 </html>
