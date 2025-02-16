@@ -16,19 +16,20 @@
     <link rel="icon" href="./image/logo.png" type="image/png">
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/home.css">
+    <link rel="stylesheet" href="./style/home-section-inverter.css">
 </head>
 <body>
 <nav>
     <ul>
         <li><img src="./image/logo.png" alt="logo"><strong>GOJAVA</strong></li>
         <li><a href="#about">Quem somos</a></li>
-        <li><a href="./page/member/index.html">Membros</a></li>
         <li><a href="#events">Eventos</a></li>
+        <li><a href="./page/member/index.html">Membros</a></li>
         <li><a href="#contacts" id="contacts-menu">Faça parte !</a></li>
     </ul>
 </nav>
 
-<section id="recents">
+<section id="recents" class="section">
     <div class="container">
         <img src="./image/icon-left.png" alt="select left">
         <div class="recent-item">
@@ -39,16 +40,17 @@
 </section>
 
 <article>
-    <section id="about" class="section">
+    <section id="about" class="section-blank">
         <h3>Quem Somos</h3>
         <p>Comunidade de usuários JAVA de Goiás. Ajudamos a disseminar a linguagem de programação JAVA em Goiás e trazer
             mais conhecimento para os profissionais
             criarem e manterem softwares de qualidade com a linguagem mais utilizada no mundo de backend.
         </p>
         <br>
-        <p>
-            <a href="#contacts">Venha fazer parte desta comunidade você também !</a>
-        </p>
+        <a href="#contacts" class="container">
+            <img src="image/java-logo.png" width="318" alt="logo java">
+            <span>Venha fazer parte da maior comunidade de desenvolvedores</span>
+        </a>
     </section>
 
     <section id="events" class="section">
@@ -56,78 +58,100 @@
         <p>
             A comunidade participa de eventos para disseminar informações e conhecimentos. Alguns destes eventos podem ser encontrados aqui.
         </p>
-        <div>
-            <h4>Join Community - 2023</h4>
-            <p>A comunidade fez parte deste grande evento atravez de palestras sobre o JAVA.</p>
-            <ul>
-                <li>
-                    Java Moderno: Rafael Souza
-                    <div class="event-links">
-                        <a href="#events">
-                            <img src="./image/icon/github.png" alt="Icone Github" class="icon" />
-                            <span>Códigos (Em breve)</span>
-                        </a>
-                        <a href="#events">
-                            <img src="./image/icon/externo.png" class="icon" alt="Link externo"/>
-                            <span>Slides (Em breve)</span>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    AWS CDK: Weder Sousa
-                    <div class="event-links">
-                        <a href="#events">
-                            <img src="./image/icon/github.png" alt="Icone Github" class="icon" />
-                            <span>Códigos (Em breve)</span>
-                        </a>
-                        <a href="#events">
-                            <img src="./image/icon/externo.png" class="icon" alt="Link externo"/>
-                            <span>Slides (Em breve)</span>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    Entregando consumidores kafka com qualidade: Alex Ferreira
-                    <div class="event-links">
-                        <a href="https://github.com/alexferreiradev/tecnologias_java/tree/join-23-demo3/Spring/sample-api">
-                            <img src="./image/icon/github.png" alt="Icone Github" class="icon" />
-                            <span>Códigos</span>
-                        </a>
-                        <a href="#events">
-                            <img src="./image/icon/externo.png" class="icon" alt="Link externo"/>
-                            <span>Slides (Em breve)</span>
-                        </a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-
-        <div>
-            <h4>Campus Party - 2023</h4>
-            <p>Comunidade irá compartilhar em breve...</p>
-        </div>
-        <div>
-            <h4>Campus Party - 2022</h4>
-            <p>Comunidade irá compartilhar em breve...</p>
-        </div>
-        <div>
-            <h4>Campus Party - 2021</h4>
-            <p>Comunidade irá compartilhar em breve...</p>
-        </div>
-        <div>
-            <h4>Campus Party - 2020</h4>
-            <p>
-                Comunidade irá compartilhar em breve...
-            </p>
-        </div>
-        <div>
-            <h4>Eventos anteriores</h4>
-            <p>
-                Os eventos anteriores poderam ser encontrados nos sites pessoais de cada membro palestrante. Entre em contato com a comunidade e poderemos ajudar a encontrar o site do palestrante que esteja buscando.
-            </p>
+        <div class="events-container">
+            <div>
+                <h4>Join Community - 2023</h4>
+                <p>A comunidade fez parte deste grande evento atravez de palestras sobre o JAVA.</p>
+                <ul class="presentation-container">
+                    <li>
+                        <img src="./image/icon/microfone.png" class="presentation-img" alt="Slides"/>
+                        <div>
+                            <span class="title">
+                                Java Moderno
+                            </span>
+                                <span>
+                                Rafael Souza
+                            </span>
+                            <div class="presentation-links">
+                                <a href="#events">
+                                    <img src="./image/icon/github.png" alt="Github" class="icon"/>
+                                </a>
+                                <a href="#events">
+                                    <img src="./image/icon/slide.png" class="icon" alt="Slides"/>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./image/icon/microfone.png" class="presentation-img" alt="Slides"/>
+                        <div>
+                            <span class="title">AWS CDK</span>
+                            <span>Weder Sousa</span>
+                            <div class="presentation-links">
+                                <a href="#events">
+                                    <img src="./image/icon/github.png" alt="Github" class="icon" />
+                                </a>
+                                <a href="#events">
+                                    <img src="./image/icon/slide.png" class="icon" alt="Slides"/>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./image/icon/microfone.png" class="presentation-img" alt="Slides"/>
+                        <div>
+                            <span class="title">Entregando consumidores kafka com qualidade</span>
+                            <span>Alex Ferreira</span>
+                            <div class="presentation-links">
+                                <a href="https://github.com/alexferreiradev/tecnologias_java/tree/join-23-demo3/Spring/sample-api">
+                                    <img src="./image/icon/github.png" alt="Github" class="icon" />
+                                </a>
+                                <a href="#events">
+                                    <img src="./image/icon/slide.png" class="icon" alt="Slides"/>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4>Campus Party - 2023</h4>
+                <p>Comunidade irá compartilhar em breve...</p>
+                <ul class="presentation-container">
+                    <li><img src="image/icon/wait.png" class="icon" alt="Em andamento" /></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Campus Party - 2022</h4>
+                <p>Comunidade irá compartilhar em breve...</p>
+                <ul class="presentation-container">
+                    <li><img src="image/icon/wait.png" class="icon" alt="Em andamento" /></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Campus Party - 2021</h4>
+                <p>Comunidade irá compartilhar em breve...</p>
+                <ul class="presentation-container">
+                    <li><img src="image/icon/wait.png" class="icon" alt="Em andamento" /></li>
+                </ul>            </div>
+            <div>
+                <h4>Campus Party - 2020</h4>
+                <p>
+                    Comunidade irá compartilhar em breve...
+                </p>
+                <ul class="presentation-container">
+                    <li><img src="image/icon/wait.png" class="icon" alt="Em andamento" /></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Eventos anteriores</h4>
+                <p>
+                    Os eventos anteriores poderam ser encontrados nos sites pessoais de cada membro palestrante. Entre em contato com a comunidade e poderemos ajudar a encontrar o site do palestrante que esteja buscando.
+                </p>
+            </div>
         </div>
     </section>
-    <section id="contacts" class="section">
+    <section id="contacts" class="section-blank">
         <h3>Contatos</h3>
         <p>Você pode entrar em contato com a comunidade através do grupo no Telegram ou enviando um <a href="mailto:goiasjava@gmail.com">e-mail</a> para nós.</p>
         <div>
