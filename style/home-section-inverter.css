@@ -1,0 +1,33 @@
+.section-blank {
+	min-height: 100vh;
+	margin: 16px 0;
+	padding: 16px 0 0;
+	background: white;
+}
+
+.section-blank h3 {
+	color: black;
+	font-size: 2em;
+	padding: 16px;
+}
+
+.section-blank p {
+	color: black;
+	font-size: 2em;
+	padding: 16px;
+}
+.section-blank h3 {
+	color: black;
+	font-size: 2em;
+	padding: 16px;
+}
+
+.section-blank p {
+	font-size: 2em;
+	margin: 0 32px;
+}
+
+.section-blank h4, h5, h6 {
+	font-size: 2em;
+	padding: 32px;
+}
