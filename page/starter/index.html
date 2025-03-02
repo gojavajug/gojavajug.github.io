@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-LZTPRWBH9N"></script>
+	<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-LZTPRWBH9N');
+
+
+	</script>
+	<title>Iniciante</title>
+	<link rel="icon" href="../../image/logo.png" type="image/png">
+	<link rel="stylesheet" href="../../style/reset.css">
+	<link rel="stylesheet" href="./starter.css">
+</head>
+<body>
+<nav>
+	<ul>
+		<li><a href="../../index.html"><img src="../../image/logo.png" alt="logo"><strong>GOJAVA</strong></a></li>
+		<li><a href="../../index.html#about">Quem somos</a></li>
+		<li><a href="../member/index.html">Membros</a></li>
+		<li><a href="../../index.html#events">Eventos</a></li>
+		<li><a href="../../index.html#contacts" id="contacts-menu">Faça parte !</a></li>
+	</ul>
+</nav>
+
+<article>
+	<section id="challenges" class="section">
+		<h3>Componentes do Java para criar seu programa</h3>
+		<p>Um programa precisa de um sistema operacional para executar comandos que precisam de hardware, CPU (processamento), RAM (memória) e Disk (armazenamento), ou seja, o sistema operacional que irá disponibilizar esta interface para você programador acessar os recursos da máquina que você quer usar para executar seu programa/sistema.</p>
+		<p>Contudo, usar estes comandos diremente para cada sistema operacional fica muito improdutivo para fazer um simples sistema que não precisa de otimização para cada tipo de sistema operacional. Além disso, cada sistema operacional teria seus próprios comandos e você teria que criar um sistema para cada tipo de sistema operacional (linux, windows, mac, dentre outros). Portanto, o java surge para resolver este problema, crie códigos que executam em vários sistemas operacionais diferentes com o mesmo desempenho.</p>
+		<p>O Java é uma linguagem compilada e orientada a objetos. O desenvolvedor cria arquivos com a extensão java (.java) e usa o compilador java (javac) para gerar um arquivo de máquina (.class). Este arquivo pode ser utilizado para executar seu programa em qualquer sistema operacional. Contudo, o sistema operacional não entende este tipo de arquivo, então, foi criado a JVM, uma máquina virtual que pode ser instalada em todo sistema operacional e traduz o .class para a linguagem do sistema operacional . Dessa forma, o desenvolvedor poderá criar um unico código que pode ser executado em diferentes sistemas operacionais, necessitando somente de instalar a JVM neste sistema operacional.</p>
+		<h3>Instalação JDK na sua máquina</h3>
+		<p>
+			O JDK é o Java Development Kit, ele contém diversos executáveis além das bibliotecas base do Java. Além disso, contém o JRE (java runtime environment), a própria JVM que irá executar seus arquivos .class. Portanto, primeira etapa para desenvolver em Java é instalação do JDK e escolha da versão. A versão mais estável e conhecida é a 11, mas com o novo padrão de versionamento do Java, teremos novas versões a cada seis meses. A versão 11 não traz tanta mudança assim, e a maioria dos devs poderá te ajudar com problemas básicos de execução.
+		</p>
+		<h3>Instalação de IDE</h3>
+		<p>Você pode codificar usando um editor de texto, mas o padrão no mercado é utilizar um ambiente que facilita a programação e execução de programas em Java. Uma IDE (Integrated Development Environment) é um sistema que facilita para o desenvolvedor a criação de um código em Java. Primeiramente, podemos criar um projeto usando algum template da própria IDE, já irá criar alguns arquivos padrões para você iniciar diretamente o código. Isso pode parecer difícil no início, mas com o tempo já irá se tornar automático para você, já irá entender onde fica os arquivos fonte (src/java/main) e arquivos auxiliares (src/java/resources) e por que seperar eles, mas neste início, foque em um arquivo .java e comece a codificar em Java através dele.</p>
+		<p>A IDE mais recomendada e que patrocina este JUG é o IntelliJ da JetBrains. Eles possuem uma versão para a comunidade chamada IntelliJ Community, você pode encontrar através deste <a href="https://www.jetbrains.com/idea/download/download-thanks.html?code=IIC">site de download</a>. Após instalar, você deve abrir a IDE e selecionar para criar novo projeto, selecione build igual a IntelliJ e clique em criar. Desta forma você criou seu primeiro projeto Java e já poderá começar a codificar usando Java.</p>
+		<h3>Primeiro programa em Java</h3>
+		<p>
+			Um programa interessante para você fazer é ler um arquivo, contar a quantidade de palavras que tem nele e criar um arquivo novo com o resultado desta contagem. Dessa forma você irá aprender como utilizar uma das principais bibliotecas do Java, o pacote nio. Através de classes deste pacote você consegue manipular arquivos no seu sistema operacional. Contudo, este site não será suficiente para te ensinar e tirar todas suas dúvidas, ele irá ser um guia para você e disponibilizamos um repositório Git com o código final básico (sem melhores práticas) para você comparar com o seu. A melhor forma de tirar dúvidas é ser membro da comunidade e enviar suas dúvidas no nosso telegram, estamos esperando você. <a href="/index.html#contacts">Entre para a comunidade agora.</a>
+		</p>
+		<h4>Repositório com exemplo Java</h4>
+		<p>
+			O repositório foi criado somente para executar, não foi criado usando as melhores práticas, foi criado de forma didática para facilitar o aprendizado e execução rápida. Caso não conheça o Git, comece aprendendo um pouco mais sobre ele através deste site. Depois faça o clone do <a>repositório</a>. Execute o projeto através da IDE como um programa Java. Ele irá ler um arquivo que esteja na raíz do projeto com o nome de Arquivo.txt e irá criar outro arquivo com o nome resultado.txt.
+		</p>
+		<h4>Conteúdo adicional</h4>
+		<p>
+			O desenvolvedor profissional Java precisa de mais conhecimento técnico para produzir rápido e de forma efetiva. Você poderá iniciar seu aprendizado com gerenciadores de dependência Maven ou Gradle. Depois poderá aprender bibliotecas de testes como Junit e Mockito. Depois bibliotecas de bancos de dados como JDBC. Por fim, poderá aprender um framework de sistemas Web como Spring e Quarkus. Alguns artigos foram compartilhados com os membros da comunidade na área de membros aqui no site, você poderá começar por eles, acesse o menu superior "Membros". Outra forma de aprender é participando dos eventos da comunidade, você irá aumentar seu network e poderá trocar experiências com outros membros da comunidade que podem estar aprendendo junto com você.
+		</p>
+	</section>
+
+</article>
+
+<footer>
+	<a href="#"><img src="../../image/logo.png" alt="logo"><strong>Comunidade GOJAVA</strong></a>
+</footer>
+
+<div class="nav-top">
+	<a href="#"><img src="../../image/icon-return-top.png" alt="Voltar acima"></a>
+</div>
+</body>
+
+<script type="text/javascript">
+    function controlTopButton() {
+        const topBt = document.querySelector('body > div');
+        const recentsSection = document.querySelector('#recents');
+        const articleSection = document.querySelector('article');
+		const footer = document.querySelector('body > footer');
+		articleSection.onmouseover = function(){
+            topBt.setAttribute("class", "nav-top")
+        };
+		recentsSection.onmouseover = function(){
+            topBt.setAttribute("class", "nav-top-hidden");
+        };
+		footer.onmouseover = function(){
+            topBt.setAttribute("class", "nav-top-hidden");
+        };
+        footer.onmouseleave = function(){
+            topBt.setAttribute("class", "nav-top")
+        };
+    }
+
+    controlTopButton();
+
+
+</script>
+</body>
+</html>
